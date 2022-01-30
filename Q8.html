@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <script src='https://d3js.org/d3.v7.min.js'></script>
+</head>
+
+<body>
+    <script>
+        var myData = ['a', 4, 1, 'b', 6, 2, 8, 9, 'z'];
+
+        var p = d3.select("body")
+            .selectAll("span")
+            .data(myData)
+            .enter()
+            .append("span")
+            .style("color", function(d) {
+                if (typeof(d) == "string") {
+
+                    return ("blue");
+
+                } else {
+                    return ("green");
+                }
+            })
+            .text(function(d, i) {
+                return d;
+            });
+    </script>
+</body>
+
+</html>

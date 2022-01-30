@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src='https://d3js.org/d3.v7.min.js'></script>
+</head>
+
+<body>
+
+    <script src='https://d3js.org/d3.v7.min.js'></script>
+    <script>
+        const width = 400;
+        const height = 300;
+        var data = [10, 15, 20, 25, 30];
+        var svg = d3.select("body")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        var xscale1 = d3.scaleLinear()
+            .domain([0, d3.max(data)])
+            .range([0, width - 100]);
+
+        var xscale2 = d3.scaleLinear()
+            .domain([0, d3.max(data)])
+            .range([0, width - 100]);
+
+        var yscale1 = d3.scaleLinear()
+            .domain([0, d3.max(data)])
+            .range([height / 2, 0]);
+
+        var yscale2 = d3.scaleLinear()
+            .domain([0, d3.max(data)])
+            .range([height / 2, 0]);
+
+        var x_axis1 = d3.axisBottom()
+            .scale(xscale1);
+
+        var x_axis2 = d3.axisRight()
+            .scale(yscale2);
+
+        var y_axis1 = d3.axisLeft()
+            .scale(yscale1);
+
+        var y_axis2 = d3.axisTop()
+            .scale(xscale2);
+
+        svg.append("g")
+            .attr("transform", "translate(50, 30)")
+            .attr("fill", "blue")
+            .call(y_axis1);
+
+        var xAxisTranslate1 = height / 2 + 28;
+        svg.append("g")
+            .attr("transform", "translate(50, " + xAxisTranslate1 + ")")
+            .attr("fill", "blue")
+            .call(x_axis1)
+
+        svg.append("g")
+            .attr("transform", "translate(50,30)")
+            .style('fill', 'blue')
+            .style('color', 'blue')
+            .call(y_axis2);
+
+        var xAxisTranslate2 = height / 2.4 - 100;
+        svg.append("g")
+            .attr("transform", "translate(350, " + xAxisTranslate2 + ")")
+            .style('fill', 'blue')
+            .style('color', 'blue')
+            .call(x_axis2)
+    </script>
+
+</body>
+
+</html>

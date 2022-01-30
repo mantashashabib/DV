@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src='https://d3js.org/d3.v7.min.js'></script>
+
+</head>
+
+<body>
+
+    <script>
+        // d3.csv("/data/employees.csv", function(data) {
+        //     for (var i = 0; i < data.length; i++) {
+        //         console.log(data[i].Name);
+        //         console.log(data[i].Age);
+        //     }
+        // });
+
+        let shapescsv = 'C:/Users/manta/Desktop/MSC DATA SCIENCE/DATA VISUALIZATION/ASSIGNMENT1/shapes.csv';
+        d3.csv(shapescsv, function(data) {
+            console.log(data);
+        });
+        //Create SVG element 
+        // var svg = d3.select("body")
+        //     .append("svg")
+        //     .attr("width", 400)
+        //     .attr("height", 400)
+        //     .style("border", '1px solid green');
+
+        //Create and append rectangle element 
+        // svg.append("rect")
+        //     .attr("x", 0)
+        //     .attr("y", 0)
+        //     .attr("width", 200)
+        //     .attr("height", 100)
+        //     .attr("fill", 'pink');
+
+        //Append circle  
+        // svg.append("circle")
+        //     .attr("cx", 250)
+        //     .attr("cy", 50)
+        //     .attr("r", 50);
+        //.attr("fill", 'red');
+
+        // svg.append("ellipse")
+        //     .attr("cx", 250)
+        //     .attr("cy", 50)
+        //     .attr("rx", 150)
+        //     .attr("ry", 50);
+
+        //Create and append text element into group 
+        // svg.append("text")
+        //     .attr("x", 150)
+        //     .attr("y", 50)
+        //     .attr("stroke", "#fff")
+        //     .text("This is some text!");
+    </script>
+</body>
+
+</html>
