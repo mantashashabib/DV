@@ -1,0 +1,5 @@
+shape,cx,cy,r,x,y,width,height,rx,ry,x1,x2,y1,y2,color
+circle,20,30,40,,,,,,,,,,,red
+rect,,,,30,20,70,50,,,,,,,blue
+eclipse,80,70,,,,,,60,50,,,,,green
+line,,,,,,,,,,10,15,18,20,yellow
