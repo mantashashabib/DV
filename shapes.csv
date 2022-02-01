@@ -1,5 +1,5 @@
 shape,cx,cy,r,x,y,width,height,rx,ry,x1,x2,y1,y2,color
-rect,,,,,130,150,160,140,,,,,,red
+rect,,,,120,130,150,160,140,,,,,,red
 eclipse,100,140,,,,,145,150,,,,,,blue
 line,,,,,,,,160,150,120,150,125,130,green
 circle,100,130,105,,,,,,,,,,,yellow
